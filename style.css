@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -56,12 +56,6 @@ button {
 
 button:hover {
     background-color: #45a049;
-}
-
-#averageRating {
-    font-size: 18px;
-    margin-top: 10px;
-    font-weight: 500;
 }
 
 .chart {
