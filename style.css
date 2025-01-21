@@ -58,6 +58,12 @@ button:hover {
     background-color: #45a049;
 }
 
+#averageRating {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
 .chart {
     margin-top: 30px;
 }
