@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Mental Fatigue Tracker</h1>
-        <p>Track your mental energy and fatigue throughout the day.</p>
+        <p>Track your mental energy and fatigue throughout the day with ease.</p>
 
         <div class="rating-container">
             <h3>How tired are you right now?</h3>
@@ -19,7 +19,9 @@
             <button onclick="submitRating()">Submit Rating</button>
         </div>
 
-        <button id="toggleHistoryBtn" onclick="toggleHistory()">Show/Hide Fatigue History</button>
+        <div class="toggle-button-container">
+            <button id="toggleHistoryBtn" onclick="toggleHistory()">View Fatigue History</button>
+        </div>
 
         <div class="history" id="historySection">
             <h3>Fatigue History</h3>
