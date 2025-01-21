@@ -21,21 +21,8 @@ function submitRating() {
     ratings.push({ time, rating: newRating });
     localStorage.setItem('ratings', JSON.stringify(ratings));
 
-    // Refresh history list and chart
-    updateHistoryList();
+    // Update chart
     updateChart();
-}
-
-// Update the list of ratings displayed
-function updateHistoryList() {
-    historyList.innerHTML = ''; // Clear existing list
-
-    // Add each rating as a list item
-    ratings.forEach((entry) => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${entry.time}: ${entry.rating} / 10`;
-        historyList.appendChild(listItem);
-    });
 }
 
 // Initialize chart with data
@@ -67,26 +54,4 @@ function updateChart() {
 }
 
 // Initialize page with existing ratings
-updateHistoryList();
 updateChart();
-
-// Toggle the visibility of the fatigue history section
-function toggleHistory() {
-    const historyVisible = historySection.style.display === 'block';
-    
-    if (historyVisible) {
-        // Hide the history section
-        historySection.style.maxHeight = '0';
-        setTimeout(() => {
-            historySection.style.display = 'none';
-        }, 500);
-        document.getElementById('toggleHistoryBtn').textContent = 'View Fatigue History';
-    } else {
-        // Show the history section
-        historySection.style.display = 'block';
-        setTimeout(() => {
-            historySection.style.maxHeight = '400px'; // Show history with smooth transition
-        }, 10);
-        document.getElementById('toggleHistoryBtn').textContent = 'Hide Fatigue History';
-    }
-}
