@@ -5,6 +5,7 @@ let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
 const fatigueRatingInput = document.getElementById('fatigueRating');
 const ratingValueDisplay = document.getElementById('ratingValue');
 const historyList = document.getElementById('historyList');
+const historySection = document.getElementById('historySection');
 
 // Update rating value display when slider moves
 fatigueRatingInput.addEventListener('input', () => {
@@ -68,3 +69,12 @@ function updateChart() {
 // Initialize page with existing ratings
 updateHistoryList();
 updateChart();
+
+// Toggle the visibility of the fatigue history section
+function toggleHistory() {
+    if (historySection.style.display === "none" || historySection.style.display === "") {
+        historySection.style.display = "block"; // Show history
+    } else {
+        historySection.style.display = "none"; // Hide history
+    }
+}
