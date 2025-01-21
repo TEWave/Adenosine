@@ -58,52 +58,6 @@ button:hover {
     background-color: #45a049;
 }
 
-.toggle-button-container {
-    margin-top: 15px;
-}
-
-#toggleHistoryBtn {
-    padding: 12px 25px;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-
-#toggleHistoryBtn:hover {
-    background-color: #0b7dda;
-}
-
-.history {
-    margin-top: 20px;
-    display: none;  /* Initially hidden */
-    max-height: 400px;
-    overflow-y: auto;
-    transition: max-height 0.5s ease-out;
-}
-
-.history h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.history ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.history li {
-    padding: 10px;
-    background-color: #f4f4f4;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    font-size: 14px;
-    text-align: left;
-}
-
 .chart {
     margin-top: 30px;
 }
