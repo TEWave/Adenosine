@@ -21,7 +21,7 @@ function submitRating() {
     ratings.push({ time, rating: newRating });
     localStorage.setItem('ratings', JSON.stringify(ratings));
 
-    // Refresh history list
+    // Refresh history list and chart
     updateHistoryList();
     updateChart();
 }
@@ -72,9 +72,21 @@ updateChart();
 
 // Toggle the visibility of the fatigue history section
 function toggleHistory() {
-    if (historySection.style.display === "none" || historySection.style.display === "") {
-        historySection.style.display = "block"; // Show history
+    const historyVisible = historySection.style.display === 'block';
+    
+    if (historyVisible) {
+        // Hide the history section
+        historySection.style.maxHeight = '0';
+        setTimeout(() => {
+            historySection.style.display = 'none';
+        }, 500);
+        document.getElementById('toggleHistoryBtn').textContent = 'View Fatigue History';
     } else {
-        historySection.style.display = "none"; // Hide history
+        // Show the history section
+        historySection.style.display = 'block';
+        setTimeout(() => {
+            historySection.style.maxHeight = '400px'; // Show history with smooth transition
+        }, 10);
+        document.getElementById('toggleHistoryBtn').textContent = 'Hide Fatigue History';
     }
 }
